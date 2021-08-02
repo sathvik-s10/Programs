@@ -1,31 +1,12 @@
-var first = [];
-var second = [];
-var count = 0;
-var substitute = first [count];
-
-while(count<first.length) {
-    if(first[count]>substitute) {
-        substitute=first[count];
-    } count++;
+var func = function(nums, count) {
+    var map = new Map();
+    for(let idx of nums) {
+        if(map.get(idx)===2) {
+            count-=idx;
+            map.set(idx, 1);
+        } else{count+=idx;
+        map.set(idx, idx);
+        }
+    } return count;
 }
-count=0;
-while(count<=substitute) {
-    second.push(0);
-    count++;
-}
-count=0;
-while(count<first.length) {
-    substitute=first[count];
-    second[substitute]+=1;
-    count++;
-}
-
-count=0;
-substitute=0;
-while(count<second.length) {
-    if(second[count]==1) {
-        substitute+=count;
-    }
-    count++;
-}
-console.log(substitute);
+console.log(func([1, 1, 2, 2, 3], 0));
