@@ -1,4 +1,4 @@
-var array = [1, 2, 3, 4, 5, 6];
+var array = [2, 3, 4, 5, 1, 6];
 var swap;
 var count = 0;
 while(count<array.length-2) {
