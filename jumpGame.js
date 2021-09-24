@@ -1,10 +1,10 @@
-//(copied solution) given nums, where at ith idx, you can jump up to ith idx+i, return if
-//you can reach the end
+//(copied solution) given nums, where at ith idx, you can jump up to nums[i] + i,
+//return if you can reach the end
 var func = function(nums) {
     var reach=0;
-    for(let i = 0; i<=reach && reach<nums.length-1; i++) {
-        reach=math.max(reach, nums[i]+i);
-    } return reach>nums.length-2;
+    for(let i = 0; i <= reach && reach < nums.length-1; i++) {
+        reach = math.max(reach, nums[i] + i);
+    } return reach >= nums.length - 1;
 }
 console.log(func([4, 1, 0, 0]));
 
